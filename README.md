@@ -43,6 +43,23 @@ protected function getContainerBaseClass()
 }
 ```
 
+And add the simplest phpunit configuration in phpunit.xml file:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- http://phpunit.de/manual/4.1/en/appendixes.configuration.html -->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.1/phpunit.xsd"
+         backupGlobals="false"
+         colors="true"
+>
+    <php>
+        <server name="KERNEL_DIR" value="/app/" />
+    </php>
+</phpunit>
+```
+
 And it's done! ApiTestCase is working with the default configuration.
  
 Usage
